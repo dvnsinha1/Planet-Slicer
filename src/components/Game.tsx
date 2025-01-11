@@ -283,8 +283,8 @@ export default function Game() {
   // Handle background music when game starts
   useEffect(() => {
     if (gameStarted && bgMusicRef.current) {
-      bgMusicRef.current.pause();
-      bgMusicRef.current.currentTime = 0;
+      // Instead of pausing, ensure the music is playing
+      bgMusicRef.current.play().catch(e => console.error('Failed to play background music:', e));
     }
   }, [gameStarted]);
 
