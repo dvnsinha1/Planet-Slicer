@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes levelup {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.1) translateY(0);
+  }
+  40% {
+    transform: scale(0.95);
+  }
+  60% {
+    transform: scale(1.03);
+  }
+  80% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-30px);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    filter: blur(5px);
+  }
+}
+
+@keyframes fire {
+  0% {
+    text-shadow: 
+      0 0 20px #ff4444,
+      0 0 40px #ff4444,
+      0 0 60px #ff4444,
+      0 0 80px #ff4444;
+    transform: translateY(0);
+  }
+  50% {
+    text-shadow: 
+      0 0 10px #ff8866,
+      0 0 20px #ff8866,
+      0 0 30px #ff8866,
+      0 0 40px #ff8866;
+    transform: translateY(-5px);
+  }
+  100% {
+    text-shadow: 
+      0 0 20px #ff4444,
+      0 0 40px #ff4444,
+      0 0 60px #ff4444,
+      0 0 80px #ff4444;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes titleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes bestOfLuck {
+  0% {
+    opacity: 0;
+    transform: scale(2) translateY(-50px);
+    filter: blur(10px);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2) translateY(0);
+    filter: blur(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.1) translateY(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    filter: blur(5px);
+  }
+}
+
+@keyframes allTheBest {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-100px);
+    filter: blur(10px);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2) translateY(0);
+    filter: blur(0);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1.1) translateY(20px);
+    opacity: 0;
+    filter: blur(8px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-levelup {
+  animation: levelup 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.4s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.4s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.animate-title {
+  animation: title 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fire {
+  animation: fire 2s ease-in-out infinite;
+  text-shadow: 0 0 20px #ff4444;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-titleFloat {
+  animation: titleFloat 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-bestOfLuck {
+  animation: bestOfLuck 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-allTheBest {
+  animation: allTheBest 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
